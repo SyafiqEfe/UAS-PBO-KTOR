@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Akademik - Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>Sistem Akademik</h1>
+            <p>Selamat datang di portal akademik</p>
+        </div>
+        
+        <div class="login-tabs">
+            <button class="tab-btn active" onclick="showTab('mahasiswa')">
+                <i class="fas fa-user-graduate"></i>
+                Mahasiswa
+            </button>
+            <button class="tab-btn" onclick="showTab('dosen')">
+                <i class="fas fa-chalkboard-teacher"></i>
+                Dosen
+            </button>
+            <button class="tab-btn" onclick="showTab('admin')">
+                <i class="fas fa-user-shield"></i>
+                Admin
+            </button>
+        </div>
+
+        <!-- Mahasiswa Login -->
+        <div id="mahasiswa-tab" class="tab-content active">
+            <form id="mahasiswa-login-form" class="login-form">
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="mhs-email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="mhs-password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login
+                </button>
+            </form>
+            <div class="register-link">
+                <p>Belum punya akun? <a href="#" onclick="showRegister()">Daftar di sini</a></p>
+            </div>
+        </div>
+
+        <!-- Dosen Login -->
+        <div id="dosen-tab" class="tab-content">
+            <form id="dosen-login-form" class="login-form">
+                <div class="form-group">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" id="dosen-nidn" placeholder="NIDN" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="dosen-password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login
+                </button>
+            </form>
+        </div>
+
+        <!-- Admin Login -->
+        <div id="admin-tab" class="tab-content">
+            <form id="admin-login-form" class="login-form">
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="admin-username" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="admin-password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Registrasi Mahasiswa Baru</h2>
+                <span class="close" onclick="hideRegister()">&times;</span>
+            </div>
+            <form id="register-form">
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="reg-nama" placeholder="Nama Lengkap" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="reg-email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="reg-password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="register-btn">
+                    <i class="fas fa-user-plus"></i>
+                    Daftar
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
