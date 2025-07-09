@@ -1,0 +1,134 @@
+/* Login.css - Modern Academic Login Card */
+body {
+  background: linear-gradient(135deg, #7b2ff2 0%, #f357a8 100%);
+  min-height: 100vh;
+}
+.login-card,
+.register-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(123, 47, 242, 0.1);
+  padding: 2rem 2rem 1.5rem 2rem;
+  max-width: 370px;
+  width: 100%;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.login-icon {
+  font-size: 3rem;
+  color: #7b2ff2;
+  margin-bottom: 0.5rem;
+}
+.login-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+.login-subtitle {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.role-tabs {
+  display: flex;
+  background: #f5f6fa;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(123, 47, 242, 0.04);
+}
+.role-tab {
+  flex: 1;
+  padding: 0.7rem 0.2rem;
+  text-align: center;
+  cursor: pointer;
+  color: #888;
+  font-weight: 500;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+.role-tab.selected {
+  background: #fff;
+  color: #7b2ff2;
+  box-shadow: 0 2px 8px rgba(123, 47, 242, 0.07);
+}
+.input-group,
+.register-group {
+  width: 100%;
+  margin-bottom: 1.1rem;
+  position: relative;
+  box-sizing: border-box;
+}
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7b2ff2;
+  font-size: 1.1rem;
+}
+.login-input,
+.login-btn,
+.register-input,
+.register-btn {
+  width: 100%;
+  box-sizing: border-box;
+}
+.login-input {
+  padding: 0.7rem 0.7rem 0.7rem 2.2rem;
+  border-radius: 6px;
+  border: 1.5px solid #e0e0e0;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+.login-input:focus {
+  border: 1.5px solid #7b2ff2;
+}
+.login-btn {
+  padding: 0.8rem 0;
+  border-radius: 6px;
+  border: none;
+  background: linear-gradient(90deg, #7b2ff2 0%, #f357a8 100%);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 8px rgba(123, 47, 242, 0.07);
+  transition: background 0.2s;
+  box-sizing: border-box;
+}
+.login-btn:hover {
+  background: linear-gradient(90deg, #6a1bc2 0%, #d13b7c 100%);
+}
+.login-error {
+  color: #c62828;
+  background: #ffebee;
+  border-left: 4px solid #c62828;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .login-card,
+  .register-card {
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+}
